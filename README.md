@@ -95,5 +95,6 @@ ADD https://github.com/ZalgoNoise/gcc10-alpine-package/releases/download/gcc-10.
         /tmp/gcc-doc-10.3.1_git20210625-r0.apk
 ADD https://github.com/ZalgoNoise/gcc10-alpine-package/releases/download/gcc-10.3.1/linux_x86-64_libstdc++-10.3.1_git20210625-r0.apk \ 
         /tmp/libstdc++-10.3.1_git20210625-r0.apk
-RUN apk add /tmp/*10.3.1_git20210625.apk && rm -rf /tmp/*10.3.1_git20210625.apk
+WORKDIR /tmp
+RUN apk add * && rm -rf * 
 ```
